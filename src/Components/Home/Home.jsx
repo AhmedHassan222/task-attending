@@ -3,8 +3,14 @@ import TransactionGraph from './../TransactionGraph/TransactionGraph';
 function Home() {
     return <>
         <div className="container">
-            <CustomerList />
-            <TransactionGraph />
+            <div className="row">
+                <div className="col-lg-6">
+                    <CustomerList />
+                </div>
+                <div className="col-lg-6">
+                    <TransactionGraph />
+                </div>
+            </div>
         </div>
     </>
 }
