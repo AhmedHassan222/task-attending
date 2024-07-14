@@ -20,7 +20,7 @@ function CustomerList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredCustomers.length === 0 ? <div className='p-3 '>No Customers maching</div> : filteredCustomers.map((customer, index) => (
+                    {filteredCustomers.length === 0 ? <div className='p-3'>No Customers maching</div> : filteredCustomers.map((customer, index) => (
                         <tr key={index} >
                             <td >{customer.name}</td>
                             <td >

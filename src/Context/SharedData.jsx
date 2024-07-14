@@ -8,10 +8,9 @@ function SharedDataProvide(props) {
     //Fech Data From API (Json-sever)
     useEffect(() => {
         const fetchData = async () => {
-            const customersRes = await axios.get('http://localhost:5000/customers');
-            const transactionsRes = await axios.get('http://localhost:5000/transactions');
-            setCustomers(customersRes.data);
-            setTransactions(transactionsRes.data);
+            const {data} = await axios.get('https://json-server-data-wine.vercel.app/db.json');
+            setCustomers(data.customers);
+            setTransactions(data.transactions);
         };
         fetchData();
     }, []);
