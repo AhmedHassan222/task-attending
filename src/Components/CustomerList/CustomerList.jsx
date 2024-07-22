@@ -34,7 +34,7 @@ function CustomerList() {
                                 {transactions
                                     .filter((transaction) => Number(transaction.customer_id) === Number(customer.id))
                                     .filter((transaction) => !amountFilter || transaction.amount >= amountFilter)
-                                    .map((transaction, index) => <div key={index} >{transaction.amount} $</div>)
+                                    .map((transaction, index) => <div key={index} >{transaction.amount} </div>)
                                 }
                             </td>
                             <td >
