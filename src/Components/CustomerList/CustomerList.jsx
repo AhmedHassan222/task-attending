@@ -1,5 +1,5 @@
 // src/CustomerList.js
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { SharedData } from '../../Context/SharedData';
 function CustomerList() {
     const { transactions, filter, setFilter, amountFilter, setAmountFilter, setSelectedCustomerId, filteredCustomers, selectedCustomerTransactions } = useContext(SharedData)
@@ -34,7 +34,7 @@ function CustomerList() {
                                 {transactions
                                     .filter((transaction) => Number(transaction.customer_id) === Number(customer.id))
                                     .filter((transaction) => !amountFilter || transaction.amount >= amountFilter)
-                                    .map((transaction, index) => <div key={index} >{transaction.amount} </div>)
+                                    .map((transaction, index) => <div key={index} >{transaction.amount} $</div>)
                                 }
                             </td>
                             <td >
